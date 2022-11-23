@@ -1,28 +1,12 @@
+
 public class Main {
-
-
-
     public static void main(String[] args) {
-        String nameJohn = "John";
-        int ageJohn = 13;
-
-
-        String nameSarah = "Sarah";
-        int ageSarah = 30;
-
-        String[] names = {"John", "Sarah"};
-        int[] ages = {13, 30};
-
-        for (int i = 0; i < names.length; i++) {
-            System.out.println("Имя - " + names[i] + " Возраст - " + ages[i]);
-        }
-        Person sarah = new Person("Sarah", 30);
-        System.out.println("sarah.name = " + sarah.getName());
-        System.out.println("sarah.age = " + sarah.getAge());
-        sarah.setAge(31);
-        System.out.println("sarah.getAge() = " + sarah.getAge());
-        Person john = new Person("john", 13);
+        Author author = new Author("Юваль Ной", "Харари");
+        Author author2 = new Author("Фредрик", "Бакман");
+        Book book = new Book("Краткая история человечества",author ,2020);
+        Book book2 = new Book("Вторая жизнь Уве", author2 ,2022);
+        book.setYearPublisher(2030);
+        System.out.println(author.getFirstName() + " " + author.getLastName() + " " + book.getYearPublisher());
+        System.out.println(author2.getFirstName() + " "  +  author2.getLastName() + " " + book2.getYearPublisher());
     }
-
-
 }
